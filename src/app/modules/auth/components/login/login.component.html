@@ -1,0 +1,67 @@
+<div class="login-wrapper mt-3">
+  <h2>Zaloguj</h2>
+  <form #f="ngForm" (ngSubmit)="onLogin()">
+    <div>
+      <mat-form-field>
+        <mat-label>Input</mat-label>
+        <input
+          required
+          minlength="4"
+          matInput
+          name="username"
+          [(ngModel)]="loginData.username"
+        />
+      </mat-form-field>
+      <ng-container
+        *ngIf="f.controls?.['username']?.invalid && f.controls?.['username']?.touched && f.controls?.['username']?.dirty"
+      >
+        <app-alert
+          *ngIf="f.controls?.['username']?.errors"
+          text="to pole jest niepoprawne"
+        ></app-alert>
+      </ng-container>
+    </div>
+    <div>
+      <mat-form-field>
+        <mat-label>Enter your password</mat-label>
+        <input
+          required
+          minlength="4"
+          name="password"
+          [(ngModel)]="loginData.password"
+          matInput
+          [type]="hide ? 'password' : 'text'"
+        />
+        <button
+          mat-icon-button
+          matSuffix
+          (click)="hide = !hide"
+          [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hide"
+        >
+          <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+        </button>
+      </mat-form-field>
+      <ng-container
+        *ngIf="f.controls?.['password']?.invalid && (f.controls?.['password']?.touched || f.controls?.['password']?.dirty)"
+      >
+        <app-alert
+          *ngIf="f.controls?.['password']?.errors"
+          text="to pole jest niepoprawne"
+        ></app-alert>
+      </ng-container>
+    </div>
+    <div class="d-flex justify-content-end">
+      <button
+        mat-raised-button
+        color="primary"
+        type="submit"
+        [disabled]="!f.valid"
+      >
+        zaloguj
+      </button>
+    </div>
+    <p class="text-center">Create account <a routerLink="/register">Here</a></p>
+    <app-alert *ngIf="errorMessage" [text]="errorMessage"></app-alert>
+  </form>
+</div>

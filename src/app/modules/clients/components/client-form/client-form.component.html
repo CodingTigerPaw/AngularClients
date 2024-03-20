@@ -1,0 +1,40 @@
+<div class="client-form-wrapper mt-3">
+  <h2>utwórz konto</h2>
+  <form [formGroup]="clientForm" (ngSubmit)="onAddClient()">
+    <div></div>
+    <div>
+      <mat-form-field>
+        <mat-label>firstname</mat-label>
+        <input matInput formControlName="firstname" />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>surname</mat-label>
+        <input matInput formControlName="surname" />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>email</mat-label>
+        <input matInput formControlName="email" />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>phone</mat-label>
+        <input matInput formControlName="phone" />
+      </mat-form-field>
+      <!-- <app-phone-control></app-phone-control> -->
+      <mat-form-field>
+        <mat-label>adress</mat-label>
+        <input matInput formControlName="adress" />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>postcode</mat-label>
+        <input matInput formControlName="postcode" />
+      </mat-form-field>
+    </div>
+    <div></div>
+    <div class="d-flex justify-content-end">
+      <button mat-raised-button color="primary" type="submit">
+        Add client
+      </button>
+    </div>
+    <!-- <app-alert *ngIf="errorMessage" [text]="errorMessage"></app-alert> -->
+  </form>
+</div>

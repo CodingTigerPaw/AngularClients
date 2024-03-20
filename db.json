@@ -1,0 +1,51 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "email": "json-server",
+      "password": "12345",
+      "username": "test1234"
+    },
+    {
+      "id": "32d7",
+      "email": "admin@test.com",
+      "username": "admin",
+      "password": "test1234"
+    },
+    {
+      "id": "be5d",
+      "email": "test@test.com",
+      "username": "test",
+      "password": "test123"
+    }
+  ],
+  "clients": [
+    {
+      "id": "1",
+      "firstname": "Marcin",
+      "surname": "Kowalski",
+      "email": "admin@test2.com",
+      "phone": "515151515",
+      "adress": "wieliczka",
+      "postcode": "80-440"
+    },
+    {
+      "id": "2",
+      "firstname": "Rafał",
+      "surname": "pajor",
+      "email": "rafcio@gmail.com",
+      "phone": "12345678",
+      "adress": "lipowe",
+      "postcode": "23-456"
+    },
+    {
+      "id": "8b8c",
+      "firstname": "jacek",
+      "surname": "zdzymira",
+      "email": "testtest123@gmail.com",
+      "phone": "33333333",
+      "adress": "warszawka",
+      "postcode": "234567"
+    }
+  ]
+}

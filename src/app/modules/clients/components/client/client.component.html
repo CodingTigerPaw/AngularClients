@@ -1,0 +1,15 @@
+<div *ngIf="client">
+  <div>
+    <p>delete client</p>
+    <button mat-raised-button color="warn" (click)="openDialog()">
+      Delete
+    </button>
+  </div>
+  Client:
+  <p>firstname: {{ client.firstname }}</p>
+  <p>surname: {{ client.surname }}</p>
+  <p>email: {{ client.email }}</p>
+  <p>phone: {{ client.phone }}</p>
+  <p>adress: {{ client.adress }}</p>
+  <p>postcode: {{ client.postcode }}</p>
+</div>
