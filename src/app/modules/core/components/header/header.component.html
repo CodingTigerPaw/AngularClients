@@ -4,8 +4,8 @@
     <span class="spacer"></span>
     <button mat-button routerLink="">Strona główna</button>
     <!-- <button mat-button routerLink="/streams">RXJS</button> -->
-    <button mat-button routerLink="login" *ngIf="!user">logowanie</button>
-    <button mat-button routerLink="clients">klienci</button>
-    <button mat-button (click)="logout()" *ngIf="user">Wyloguj</button>
+    <button mat-button routerLink="login" *ngIf="!user">login</button>
+    <button mat-button routerLink="clients">clients</button>
+    <button mat-button (click)="logout()" *ngIf="user">Log out</button>
   </mat-toolbar>
 </nav>
