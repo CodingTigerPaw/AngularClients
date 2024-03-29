@@ -9,6 +9,8 @@ import { HomeModule } from './modules/home/home.module';
 import { AuthModule } from './modules/auth/auth.module';
 import { ClientsModule } from './modules/clients/clients.module';
 import { RxjsModule } from './modules/rxjs/rxjs.module';
+import { SpinnerComponent } from './modules/core/components/spinner/spinner.component';
+import { FooterComponent } from './modules/core/components/footer/footer.component';
 
 @NgModule({
   declarations: [AppComponent],
@@ -20,6 +22,7 @@ import { RxjsModule } from './modules/rxjs/rxjs.module';
     ClientsModule,
     CoreModule,
     RxjsModule,
+    FooterComponent,
   ],
   providers: [provideAnimationsAsync()],
   bootstrap: [AppComponent],
