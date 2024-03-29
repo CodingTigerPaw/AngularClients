@@ -10,9 +10,10 @@ import {
 } from 'rxjs';
 
 @Component({
-  selector: 'app-rxjs',
-  templateUrl: './rxjs.component.html',
-  styleUrl: './rxjs.component.scss',
+    selector: 'app-rxjs',
+    templateUrl: './rxjs.component.html',
+    styleUrl: './rxjs.component.scss',
+    standalone: true,
 })
 export class RxjsComponent {
   // streamData = new BehaviorSubject();

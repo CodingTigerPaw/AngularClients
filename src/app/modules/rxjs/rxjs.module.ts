@@ -6,12 +6,10 @@ import { RxjsComponent } from './rxjs.component';
 
 
 @NgModule({
-  declarations: [
-    RxjsComponent
-  ],
-  imports: [
-    CommonModule,
-    RxjsRoutingModule
-  ]
+    imports: [
+        CommonModule,
+        RxjsRoutingModule,
+        RxjsComponent
+    ]
 })
 export class RxjsModule { }

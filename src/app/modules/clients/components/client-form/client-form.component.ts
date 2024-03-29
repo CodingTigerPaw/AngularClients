@@ -1,13 +1,25 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { postClientForm } from '../../../core/models/clients.model';
 import { ClientsService } from '../../../core/services/clients.service';
 import { Router } from '@angular/router';
 import { postcodeValidator } from '../../../shared/validators/postcode.validator';
+import { MatButton } from '@angular/material/button';
+import { MatInput } from '@angular/material/input';
+import { MatFormField, MatLabel } from '@angular/material/form-field';
 @Component({
-  selector: 'app-client-form',
-  templateUrl: './client-form.component.html',
-  styleUrl: './client-form.component.scss',
+    selector: 'app-client-form',
+    templateUrl: './client-form.component.html',
+    styleUrl: './client-form.component.scss',
+    standalone: true,
+    imports: [
+        FormsModule,
+        ReactiveFormsModule,
+        MatFormField,
+        MatLabel,
+        MatInput,
+        MatButton,
+    ],
 })
 export class ClientFormComponent implements OnInit {
   constructor(private clients: ClientsService, private router: Router) {}

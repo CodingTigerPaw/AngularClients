@@ -7,16 +7,17 @@ import {
 import { combineLatest } from 'rxjs';
 
 @Component({
-  selector: 'app-phone-control',
-  templateUrl: './phone-control.component.html',
-  styleUrl: './phone-control.component.scss',
-  providers: [
-    {
-      provide: NG_VALUE_ACCESSOR,
-      useExisting: PhoneControlComponent,
-      multi: true,
-    },
-  ],
+    selector: 'app-phone-control',
+    templateUrl: './phone-control.component.html',
+    styleUrl: './phone-control.component.scss',
+    providers: [
+        {
+            provide: NG_VALUE_ACCESSOR,
+            useExisting: PhoneControlComponent,
+            multi: true,
+        },
+    ],
+    standalone: true,
 })
 export class PhoneControlComponent implements ControlValueAccessor {
   numberPrefixControl = new FormControl('');
